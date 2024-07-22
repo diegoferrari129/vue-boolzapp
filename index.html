@@ -14,49 +14,61 @@
 <body>
     <!-- vue id -->
     <div id="app">
-        
-    <main>
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <section class="contacts">
-                        <div class="col-12 bg-primary">
+
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <!-- CONTACS SECTION -->
+                        <section class="contacts pt-3">
+
+                            <!-- USER ACCOUNT NAV BAR -->
                             <nav class="account__navbar">
-                                <!-- img del mio contatto e icons -->info
+                                <!-- img del mio contatto e icons -->
                             </nav>
-                        </div>
-                        <div class="col-12">
-                            <div class="notices">notfica
-                                <!-- notifiche -->
+
+
+                            <div class="contacts__window">
+                                <!-- NOTIFICATIONS -->
+                                <div class="notices">
+                                    <!-- notifiche -->
+                                </div>
+                                <!-- CONTACTS LIST -->
+                                <div class="contacts__list">
+                                    <!-- searchbar, lista dei contatti -->
+                                </div>
                             </div>
-                            <div class="contacts__list">
-                                <!-- notifica, searchbar, lista dei contatti -->contatti
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-8">
-                    <section class="chat">
-                        <div class="col-12">
+        
+                        </section>
+                    </div>
+                    <div class="col-8">
+                        <!-- CHAT SECTION -->
+                        <section class="chat mt-3">
+                            <!-- CHAT NAV BAR -->
                             <nav class="chat__navbar">
-                                <!-- img del contatto e icons -->info
+                                <!-- img del contatto e icons -->
                             </nav>
-                        </div>
-                        <div class="col-12">
-                            <div class="chat__messages">chat
-                                <!-- messaggi -->
+
+                            <!-- CHAT MESSAGES -->
+                            <div class="chat__window pt-5">
+                                <div class="offset-6 col-6">
+                                    <div class="sent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente atque cupiditate laudantium natus doloremque ut consectetur commodi est architecto dicta saepe enim, minima doloribus minus, illo tempore quasi. Non, sed!</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="recieved">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid provident quidem obcaecati exercitationem voluptates nesciunt nostrum pariatur magnam earum voluptas hic ipsa consequatur eaque iure minima quas ducimus, eligendi magni!</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="chat__input bg-primary">
-                                <!-- input del messagio e icons -->input
+
+                            <!-- INPUT MESSAGE -->
+                            <div class="chat__input">
+                                <!-- input del messagio e icons -->
                             </div>
-                        </div>
-                    </section>
+                        </section>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
     
     <!-- vue js -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

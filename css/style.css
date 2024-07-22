@@ -5,3 +5,38 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+
+}
+
+.account__navbar, .chat__navbar, .chat__input {
+    height: 50px;
+    background-color: lightgrey;
+}
+
+.contacts__window {
+    height: calc(95vh - 50px);
+}
+
+.chat {
+    background-image: url(../img/mine.jpg);
+}
+
+.chat__window {
+    height: calc(95vh - 100px);
+}
+
+.sent, .recieved {
+    margin: 0px 100px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.sent {
+    background-color: lightgreen;
+}
+
+.recieved {
+    background-color: white;
+}
