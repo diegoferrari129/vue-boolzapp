@@ -11,12 +11,12 @@ body {
 }
 
 .account__navbar, .chat__navbar, .chat__input {
-    height: 50px;
+    height: 70px;
     background-color: lightgrey;
 }
 
 .contacts__window {
-    height: calc(95vh - 50px);
+    height: calc(95vh - 70px);
 }
 
 .chat {
@@ -24,7 +24,7 @@ body {
 }
 
 .chat__window {
-    height: calc(95vh - 100px);
+    height: calc(95vh - 140px);
 }
 
 .sent, .recieved {
@@ -39,4 +39,15 @@ body {
 
 .recieved {
     background-color: white;
+}
+
+ul img {
+    width: 70px;
+    border-radius: 50%;
+    margin: 10px 0px 0px 10px;
+}
+
+img {
+    width: 50px;
+    border-radius: 50%;
 }
