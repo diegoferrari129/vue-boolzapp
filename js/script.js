@@ -10,6 +10,7 @@ createApp({
                 avatar: './img/avatar_io.jpg',
             },
 
+            i: 0,
             contacts: [
                     {
                     name: 'Michele',

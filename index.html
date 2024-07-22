@@ -18,11 +18,12 @@
         <main>
             <div class="container">
                 <div class="row">
-                    <div class="col-4">
-                        <!-- CONTACS SECTION -->
+                    <!-- CONTACS SECTION -->
+                    <div class="col-4 p-0 m-0">
+                        
                         <section class="contacts pt-3">
 
-                            <!-- USER ACCOUNT NAV BAR -->
+                            <!-- USER ACCOUNT -->
                             <nav class="account__navbar d-flex align-items-center ps-2">
                                 <img :src="account.avatar" alt="">
                                 <span>{{account.name}}</span>
@@ -30,10 +31,12 @@
 
 
                             <div class="contacts__window">
+                                
                                 <!-- NOTIFICATIONS -->
                                 <div class="notices">
                                     <!-- notifiche -->
                                 </div>
+
                                 <!-- CONTACTS LIST -->
                                 <div class="contacts__list">
                                     <ul class="list-unstyled" v-for="(contact, index) in contacts">
@@ -43,32 +46,42 @@
                                         </li>
                                     </ul>
                                 </div>
+
                             </div>
         
                         </section>
                     </div>
-                    <div class="col-8">
-                        <!-- CHAT SECTION -->
+
+                    <!-- CHAT SECTION -->
+                    <div class="col-8 m-0 p-0">
+
                         <section class="chat mt-3">
-                            <!-- CHAT NAV BAR -->
-                            <nav class="chat__navbar">
-                                <!-- img del contatto e icons -->
+
+                            <!-- CONTACT INFO -->
+                            <nav class="chat__navbar d-flex align-items-center ps-2">
+                                <img :src="contacts[i].avatar" :alt="contacts[i].name">
+                                <span>{{contacts[i].name}}</span>
                             </nav>
 
-                            <!-- CHAT MESSAGES -->
+                            <!-- MESSAGES -->
                             <div class="chat__window pt-5">
                                 <div class="offset-6 col-6">
-                                    <div class="sent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente atque cupiditate laudantium natus doloremque ut consectetur commodi est architecto dicta saepe enim, minima doloribus minus, illo tempore quasi. Non, sed!</div>
+                                    <div class="sent" v-for="">
+                                        <span>{{}}</span>
+                                    </div>
                                 </div>
                                 <div class="col-6">
-                                    <div class="recieved">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid provident quidem obcaecati exercitationem voluptates nesciunt nostrum pariatur magnam earum voluptas hic ipsa consequatur eaque iure minima quas ducimus, eligendi magni!</div>
+                                    <div class="recieved">
+                                        
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- INPUT MESSAGE -->
+                            <!-- INPUT -->
                             <div class="chat__input">
                                 <!-- input del messagio e icons -->
                             </div>
+
                         </section>
                     </div>
                 </div>
