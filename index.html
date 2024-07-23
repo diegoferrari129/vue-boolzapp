@@ -65,16 +65,11 @@
 
                             <!-- MESSAGES -->
                             <div class="chat__window pt-5">
-                                <div class="offset-6 col-6">
-                                    <div v-for="message in contacts[activeContact].messages" :class="message.status === 'sent' ? 'sent' : 'received'">
-                                        <span>{{message.message}}</span>
-                                    </div>
+
+                                <div v-for="message in contacts[activeContact].messages" :class="message.status === 'sent' ? 'sent' : 'received'">
+                                    <span>{{message.message}}</span>
                                 </div>
-                                <div class="col-6">
-                                    <div class="recieved">
-                                        
-                                    </div>
-                                </div>
+                                
                             </div>
 
                             <!-- INPUT -->

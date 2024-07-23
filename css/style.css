@@ -27,7 +27,7 @@ body {
     height: calc(95vh - 140px);
 }
 
-.sent, .recieved {
+.sent, .received {
     margin: 0px 100px;
     padding: 10px;
     border-radius: 15px;
@@ -35,10 +35,12 @@ body {
 
 .sent {
     background-color: lightgreen;
+    text-align: end;
 }
 
-.recieved {
+.received {
     background-color: white;
+    text-align: start;
 }
 
 ul img {
