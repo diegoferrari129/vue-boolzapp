@@ -14,6 +14,8 @@ createApp({
             
             newMessage: '',
 
+            search: '',
+
             contacts: [
                     {
                     name: 'Michele',
@@ -202,6 +204,20 @@ createApp({
                     });
                 }, 1000);
             }; 
+        },
+
+        filterContacts() {
+            if (this.search !== '') {
+                this.contacts.forEach((contact) => {
+                    if(!contact.name.toLowerCase().includes(this.search.toLowerCase())) {
+                        contact.visible = false;
+                    }
+                });
+            } else {
+                this.contacts.forEach((contact) => {
+                    contact.visible = false;
+                });
+            }
         }
     },
 
