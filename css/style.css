@@ -7,7 +7,8 @@
 }
 
 body {
-
+    background: linear-gradient(#009688 0%, #009688 130px, #d9dbd5 130px, #d9dbd5 100%);
+    min-height: 100vh;
 }
 
 .account__navbar, .chat__navbar, .chat__input {
@@ -15,8 +16,36 @@ body {
     background-color: lightgrey;
 }
 
+.notifications {
+    background-color: lightblue;
+    height: 75px;
+}
+
+.notifications-icon {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    color: lightblue;
+    background-color: white;
+}
+
+.notifications a {
+    color: grey;
+    font-size: 14px;
+}
+
 .contacts__window {
-    height: calc(95vh - 70px);
+    height: calc(95vh - 140px);
+}
+
+.contacts__list {
+    cursor: pointer;
+    background-color: white;
+    min-height: 100%;
+}
+
+.contacts__list ul {
+    
 }
 
 .chat {
@@ -26,6 +55,7 @@ body {
 
 .chat__window {
     height: calc(95vh - 140px);
+    overflow-y: auto;
 }
 
 .sent, .received {
@@ -35,7 +65,7 @@ body {
 }
 
 .sent {
-    background-color: lightgreen;
+    background-color:#dcf8c6;
     text-align: end;
 }
 
@@ -45,7 +75,7 @@ body {
 }
 
 ul img {
-    width: 70px;
+    width: 50px;
     border-radius: 50%;
     margin: 10px 0px 0px 10px;
 }
@@ -56,5 +86,5 @@ img {
 }
 
 .active {
-    background-color: grey;
+    background-color: lightgrey;
 }
