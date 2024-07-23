@@ -194,8 +194,14 @@ createApp({
                 };
                 this.contacts[this.activeContact].messages.push(message);
                 this.newMessage = '';
-            };
-            
+
+                setTimeout(() => {
+                    this.contacts[this.activeContact].messages.push({
+                        message: 'Ok',
+                        status: 'received'
+                    });
+                }, 1000);
+            }; 
         }
     },
 
