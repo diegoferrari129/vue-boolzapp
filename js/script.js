@@ -191,6 +191,7 @@ createApp({
             if (this.newMessage !== '') {
 
                 const message = {
+                    date: new Date().toLocaleString(),
                     message: this.newMessage,
                     status: 'sent'
                 };
@@ -199,6 +200,7 @@ createApp({
 
                 setTimeout(() => {
                     this.contacts[this.activeContact].messages.push({
+                        date: new Date().toLocaleString(),
                         message: 'Ok',
                         status: 'received'
                     });

@@ -74,7 +74,8 @@
                             <!-- MESSAGES -->
                             <div class="chat__window pt-5">
                                     <div v-for="message in contacts[activeContact].messages" :class="message.status === 'sent' ? 'sent' : 'received'">
-                                        <span>{{message.message}}</span>
+                                        <p>{{message.message}}</p>
+                                        <span class="message-time">{{ message.date }}</span>
                                     </div>
                             </div>
 
