@@ -51,3 +51,7 @@ img {
     width: 50px;
     border-radius: 50%;
 }
+
+.active {
+    background-color: grey;
+}

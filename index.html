@@ -39,8 +39,8 @@
 
                                 <!-- CONTACTS LIST -->
                                 <div class="contacts__list">
-                                    <ul class="list-unstyled" v-for="(contact, index) in contacts">
-                                        <li>
+                                    <ul class="list-unstyled" v-for="(contact, index) in contacts" :class="index == activeContact ? 'active' : ''">
+                                        <li @click="selectContact(index)">
                                             <img :src="contact.avatar" :alt="contact.name">
                                             <span>{{contact.name}}</span>
                                         </li>
@@ -58,16 +58,16 @@
                         <section class="chat mt-3">
 
                             <!-- CONTACT INFO -->
-                            <nav class="chat__navbar d-flex align-items-center ps-2">
-                                <img :src="contacts[i].avatar" :alt="contacts[i].name">
-                                <span>{{contacts[i].name}}</span>
+                            <nav class="chat__navbar d-flex align-items-center ps-2" >
+                                <img :src="contacts[activeContact].avatar" :alt="contacts[activeContact].name">
+                                <span>{{contacts[activeContact].name}}</span>
                             </nav>
 
                             <!-- MESSAGES -->
                             <div class="chat__window pt-5">
                                 <div class="offset-6 col-6">
-                                    <div class="sent" v-for="">
-                                        <span>{{}}</span>
+                                    <div v-for="message in contacts[activeContact].messages" :class="message.status === 'sent' ? 'sent' : 'received'">
+                                        <span>{{message.message}}</span>
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -79,7 +79,10 @@
 
                             <!-- INPUT -->
                             <div class="chat__input">
-                                <!-- input del messagio e icons -->
+
+                                <div class="mx-5 pt-3">
+                                    <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="sendMessage">
+                                </div>
                             </div>
 
                         </section>

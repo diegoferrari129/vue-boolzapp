@@ -10,7 +10,10 @@ createApp({
                 avatar: './img/avatar_io.jpg',
             },
 
-            i: 0,
+            activeContact: 0,
+            
+            newMessage: '',
+
             contacts: [
                     {
                     name: 'Michele',
@@ -173,11 +176,23 @@ createApp({
                         }
                     ],
                 }
-            ]   
-
+            ], 
         }
     },
     methods: {
 
+        selectContact(index) {
+            this.activeContact = index;
+            },
+        
+        sendMessage() {
+            let newMessage = {
+                message: this.newMessage,
+                status: 'sent',
+            };
+            this.activeContact.messages.push(newMessage);
+            this.message = null;
+        }
     },
+
 }).mount('#app');
