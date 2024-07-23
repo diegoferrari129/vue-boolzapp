@@ -186,12 +186,16 @@ createApp({
             },
         
         sendMessage() {
-            let newMessage = {
-                message: this.newMessage,
-                status: 'sent',
+            if (this.newMessage !== '') {
+
+                const message = {
+                    message: this.newMessage,
+                    status: 'sent'
+                };
+                this.contacts[this.activeContact].messages.push(message);
+                this.newMessage = '';
             };
-            this.activeContact.messages.push(newMessage);
-            this.message = null;
+            
         }
     },
 
