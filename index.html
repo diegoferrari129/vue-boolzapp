@@ -27,7 +27,7 @@
                             <nav class="navbar account__navbar d-flex align-items-center ps-2 ">
                                 <div>
                                     <img :src="account.avatar" alt="">
-                                    <span>{{account.name}}</span>
+                                    <span class="ps-1">{{account.name}}</span>
                                 </div>
                                 <div>
                                     <ul class="list-unstyled d-flex d-block cursor-pointer">
@@ -88,7 +88,7 @@
                                 <div>
                                     <img :src="contacts[activeContact].avatar" :alt="contacts[activeContact].name">
                                 </div>
-                                <div>
+                                <div class="ps-2">
                                     <div class="">{{contacts[activeContact].name}}</div>
                                     <div></div>
                                     <div class="last-message-time">Ultimo accesso oggi alle {{contacts[activeContact].messages[contacts[activeContact].messages.length - 1].date.split(' ')[1]}}</div>
