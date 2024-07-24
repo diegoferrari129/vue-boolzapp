@@ -219,7 +219,7 @@ createApp({
                 });
             } else {
                 this.contacts.forEach((contact) => {
-                    contact.visible = false;
+                    contact.visible = true;
                 });
             }
         },

@@ -54,6 +54,8 @@ body {
 .chat__window {
     height: calc(95vh - 140px);
     overflow-y: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .message {
@@ -68,12 +70,14 @@ body {
 
 .sent {
     background-color:#dcf8c6;
-    margin: 0px 100px 10px 500px;
+    max-width: 40%;
+    margin-left: auto;
+    
 }
 
 .received {
     background-color: white;
-    margin: 0px 500px 10px 100px;
+    max-width: 40%;
 }
 
 .message-time {
