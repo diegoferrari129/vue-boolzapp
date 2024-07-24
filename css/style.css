@@ -118,3 +118,7 @@ img {
 .cursor-pointer {
     cursor: pointer;
 }
+
+.ml-auto {
+    margin-left: auto;
+}
