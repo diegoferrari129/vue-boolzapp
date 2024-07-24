@@ -48,9 +48,12 @@
                                 <div class="contacts__list">
                                     <input type="text" class="form-control" placeholder="Cerca..." v-model="search" @keyup="filterContacts">
                                     <ul class="list-unstyled" v-for="(contact, index) in contacts" :class="index == activeContact ? 'active' : ''" v-show="contact.visible">
-                                        <li @click="selectContact(index)">
-                                            <img :src="contact.avatar" :alt="contact.name">
-                                            <span>{{contact.name}}</span>
+                                        <li class="d-flex" @click="selectContact(index)">
+                                            <img  :src="contact.avatar" :alt="contact.name">
+                                            <div>
+                                                <div >{{contact.name}}</div>
+                                                <div >{{contact.messages[contact.messages.length - 1].message}}</div>
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>
@@ -66,7 +69,7 @@
                         <section class="chat mt-3">
 
                             <!-- CONTACT INFO -->
-                            <nav class="chat__navbar d-flex align-items-center ps-2" >
+                            <nav class="chat__navbar d-flex align-items-center ps-2">
                                 <img :src="contacts[activeContact].avatar" :alt="contacts[activeContact].name">
                                 <span>{{contacts[activeContact].name}}</span>
                             </nav>

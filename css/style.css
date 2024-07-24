@@ -59,7 +59,6 @@ body {
 }
 
 .sent, .received {
-    margin: 0px 100px;
     padding: 10px;
     border-radius: 15px;
 }

@@ -178,7 +178,9 @@ createApp({
                         }
                     ],
                 }
-            ], 
+            ],
+            
+            
         }
     },
     methods: {
@@ -220,7 +222,9 @@ createApp({
                     contact.visible = false;
                 });
             }
-        }
+        },
+
+        
     },
 
 }).mount('#app');
