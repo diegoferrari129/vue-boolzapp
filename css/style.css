@@ -43,6 +43,7 @@ body {
     cursor: pointer;
     background-color: white;
     min-height: 100%;
+    overflow-y: auto;
 }
 
 .chat {
@@ -108,4 +109,12 @@ img {
 
 .active {
     background-color: lightgrey;
+}
+
+.color-grey {
+    color: gray;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }

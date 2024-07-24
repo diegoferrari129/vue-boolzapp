@@ -24,9 +24,19 @@
                         <section class="contacts pt-3">
 
                             <!-- USER ACCOUNT -->
-                            <nav class="account__navbar d-flex align-items-center ps-2">
-                                <img :src="account.avatar" alt="">
-                                <span>{{account.name}}</span>
+                            <nav class="navbar account__navbar d-flex align-items-center ps-2 ">
+                                <div>
+                                    <img :src="account.avatar" alt="">
+                                    <span>{{account.name}}</span>
+                                </div>
+                                <div>
+                                    <ul class="list-unstyled d-flex d-block cursor-pointer">
+                                        <li><i class="fa-solid fa-circle-notch fa-lg mt-3 p-2 color-grey"></i></li>
+                                        <li><i class="fa-solid fa-message fa-lg mt-3 p-2 color-grey"></i></li>
+                                        <li><i class="fa-solid fa-ellipsis-vertical fa-lg mt-3 p-2 me-2 color-grey"></i></li>
+                                    </ul>
+                                </div>
+                                
                             </nav>
 
 
@@ -82,6 +92,13 @@
                                     <div class="">{{contacts[activeContact].name}}</div>
                                     <div class="last-message-time">Ultimo accesso oggi alle {{contacts[activeContact].messages[contacts[activeContact].messages.length - 1].date.split(' ')[1]}}</div>
                                 </div>
+                                <div class="d-flex justify-content-end">
+                                    <ul class="list-unstyled d-flex justify-content-end">
+                                        <li><i class="fa-solid fa-magnifying-glass fa-lg p-2 mt-3 color-grey"></i></li>
+                                        <li><i class="fa-solid fa-paperclip fa-lg p-2 mt-3 color-grey"></i></li>
+                                        <li><i class="fa-solid fa-ellipsis-vertical fa-lg p-2 mt-3 color-grey me-2"></i></li>
+                                      </ul>
+                                </div>
                                 
                             </nav>
 
@@ -96,8 +113,10 @@
                             <!-- INPUT -->
                             <div class="chat__input">
 
-                                <div class="mx-5 pt-3">
+                                <div class="mx-5 pt-3 d-flex">
+                                    <i class="fa-regular fa-face-smile fa-lg mt-3 px-3 p-1 color-grey"></i>
                                     <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="sendMessage">
+                                    <i class="fa-solid fa-microphone fa-lg mt-3 px-3 color-grey p-1"></i>
                                 </div>
                             </div>
 
